@@ -105,7 +105,7 @@ High-Availability Enabled: false
 
 At this point you probably want to start using vault so you need to export your token, so run `VAULT_TOKEN=<root token>`.
 
-Cool. Let's try to fill first secret. Vault has [nice into](https://www.vaultproject.io/intro/getting-started/first-secret.html),
+Cool. Let's try to fill first secret. Vault has [nice intro](https://www.vaultproject.io/intro/getting-started/first-secret.html),
 here's it short version:
 
 ```
