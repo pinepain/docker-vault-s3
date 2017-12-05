@@ -13,7 +13,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /vault
-EXPOSE 8200
+EXPOSE 8200 8201
 
 ENV VAULT_ADDR=http://127.0.0.1:8200
 ENV LOG_LEVEL=info
