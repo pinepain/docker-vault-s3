@@ -51,7 +51,7 @@ export AWS_DEFAULT_REGION="<aws region>"
 
 Run image:
 
-`docker run -p 8200:8200 -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_S3_BUCKET -e AWS_REGION -d pinepain/vault`
+`docker run -p 8200:8200 --cap-add IPC_LOCK -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_S3_BUCKET -e AWS_REGION -d pinepain/vault`
 
 and export vault address:
 
@@ -72,6 +72,11 @@ You'll get container id. To view logs you can run `docker logs <conatiner id>`
 
 ==> Vault server started! Log data will stream in below:
 ```
+
+Note, that in production you will probably want to run vault container daemonized and keep it up and running forever:
+
+`docker run -p 8200:8200 --restart=always --cap-add IPC_LOCK -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_S3_BUCKET -e AWS_REGION -d pinepain/vault`
+
 
 ## Initializing vault
 
